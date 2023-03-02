@@ -87,8 +87,8 @@ def generate(path, name, frameNumber, frameRate, width, height, qp):
     EnableOpenGOP         = 0   # Support for open GOPs (0: disabled, 1: enabled)
     '''
     file.write(cfg5)
-    file.write('    QPISlice              = 28  # Quant. param for I Slices (0-51)\n')
-    file.write('    QPPSlice              = 28  # Quant. param for P Slices (0-51)\n')
+    file.write('    QPISlice              = ' + qp + '  # Quant. param for I Slices (0-51)\n')
+    file.write('    QPPSlice              = ' + qp + '  # Quant. param for P Slices (0-51)\n')
     cfg6 = '''
     FrameSkip             = 0   # Number of frames to be skipped in input (e.g 2 will code every third frame). 
                                 # Note that this now excludes intermediate (i.e. B) coded pictures
@@ -193,7 +193,7 @@ def generate(path, name, frameNumber, frameRate, width, height, qp):
     PReplaceBSlice         = 0  # Replace B-coded slices with P-coded slices when NumberBFrames>0
     '''
     file.write(cfg6)
-    file.write('QPBSlice               = 30 # Quant. param for B slices (0-51)')
+    file.write('QPBSlice               = ' + qp + ' # Quant. param for B slices (0-51)')
     cfg7 = '''
     BRefPicQPOffset        = -1 # Quantization offset for reference B coded pictures (-51..51)
     DirectModeType         = 1  # Direct Mode Type (0:Temporal 1:Spatial)
@@ -595,7 +595,7 @@ def generate(path, name, frameNumber, frameRate, width, height, qp):
     #Fast Motion Estimation Control Parameters
     ########################################################################################
 
-    SearchMode               = 3   # Motion estimation mode
+    SearchMode               = 3    # Motion estimation mode
                                     # -1 = Full Search
                                     #  0 = Fast Full Search (default)
                                     #  1 = UMHexagon Search
