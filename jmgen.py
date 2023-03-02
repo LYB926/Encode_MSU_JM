@@ -220,7 +220,7 @@ def generate(path, name, frameNumber, frameRate, width, height, qp):
 
     BiPredMotionEstimation = 1   # Enable Bipredictive based Motion Estimation (0:disabled, 1:enabled)
     BiPredMERefinements    = 3   # Bipredictive ME extra refinements (0: single, N: N extra refinements (1 default)
-    BiPredMESearchRange    = 0  # Bipredictive ME Search range (8 default). Note that range is halved for every extra refinement.
+    BiPredMESearchRange    = 16  # Bipredictive ME Search range (8 default). Note that range is halved for every extra refinement.
     BiPredMESubPel         = 2   # Bipredictive ME Subpixel Consideration (0: disabled, 1: single level, 2: dual level)
 
     ##########################################################################################
