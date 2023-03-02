@@ -42,6 +42,5 @@ for i in range(len(fileName)):
         generate(path, fileName[i], frameNumber[i], frameRate[i], width[i], height[i], qp)
         shFile.write('./lencod.exe -f ' + fileName[i] + '_' + qp + '.cfg > ' + fileName[i] + '_' + qp + '.log &\n')
     shFile.write("wait\n")
-shFile.write('wait\n')
 shFile.close()
 os.system('chmod 777 ' + shName)
