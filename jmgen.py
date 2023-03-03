@@ -64,7 +64,7 @@ def generate(path, name, frameNumber, frameRate, width, height, qp):
     file.write(cfg4)
     file.write('TraceFile             = "trace_' + name + '_' + qp + '.txt"      # Trace file\n')
     file.write('    ReconFile             = "recon_' + name + '_' + qp + '.yuv"       # Reconstruction YUV file\n')
-    file.write('    OutputFile            = "' + /data/WispChan/jm_benchmark_output/ + name + '_' + qp + '.264' + '"           # Bitstream\n    ')
+    file.write('    OutputFile            = "' + '/data/WispChan/jm_benchmark_output/' + name + '_' + qp + '.264' + '"           # Bitstream\n    ')
     file.write('StatsFile             = "stats_' + name + '_' + qp +'.dat"          # Coding statistics file')
     cfg5 = '''
     NumberOfViews         = 1                     # Number of views to encode (1=1 view, 2=2 views)
